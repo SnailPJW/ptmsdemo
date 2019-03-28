@@ -9,7 +9,6 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./dist/css/dashboard.css">
-    <link rel="stylesheet" href="./dist/css/jumbotron.css">
     <style>
         .bd-placeholder-img {
           font-size: 1.125rem;
@@ -21,12 +20,57 @@
             font-size: 3.5rem;
           }
         }
+        .navbar {
+            height:35px;
+        }
+        .navbar img{
+          margin-top: 210px;
+          width: 250px;
+        }
     </style>
     <title>研究倫理委員會申請暨審查系統</title>
   </head>
   <body>
-
+      
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+              <ul class="navbar-nav ml-auto text-center">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="mx-auto my-2 order-0 order-md-1 position-relative">
+              <a class="mx-auto" href="#">
+                  <img src="./assets/images/logo/logoCircleWhite.png" class="rounded-circle">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+          </div>
+          <div class="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
+              <ul class="navbar-nav mr-auto text-center">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+
+
+      <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
           <a class="navbar-brand" href="#">研究倫理委員會申請暨審查系統</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -57,8 +101,15 @@
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
           </div>
-        </nav>
-      
+        </nav> -->
+        
+
+        <div class="jumbotron bg-info text-white text-right" style="margin-bottom:-13px;">
+        </div>
+        <div class="jumbotron bg-danger text-white text-right">
+          </div>
+
+
       <div class="container-fluid">
         <div class="row">
           <nav class="col-md-2 d-none d-md-block bg-light sidebar">
