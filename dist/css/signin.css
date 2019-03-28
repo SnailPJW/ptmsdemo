@@ -1,6 +1,6 @@
 .form-signin {
   width: 100%;
-  max-width: 570px;
+  max-width: 650px;
   padding: 15px;
   margin: auto;
 }
@@ -15,7 +15,7 @@
   z-index: 2;
 }
 .form-signin input[type="email"] {
-  margin-top: 50px;
+  margin-top: 65px;
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -27,4 +27,7 @@
 }
 .form-signin a{
   text-decoration: none;
+}
+#h1SystemTitle{
+  letter-spacing: 5px;
 }
