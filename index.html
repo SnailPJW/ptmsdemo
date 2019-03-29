@@ -29,180 +29,126 @@
         } */
 
         /* timeline h */
+/*         
+        a {
+          color: #50585f;
+          text-decoration: none;
+        }
+        a:hover {
+          color: #383e44;
+        } */
+
+         div.container {
+          display: flex;
+          flex: auto;
+          flex-direction: column;
+          max-height: 100%;
+        }
+
+        div.header {
+          height: auto;
+          text-align: center;
+          background: slategrey;
+          color: ghostwhite;
+          padding: 2.3rem 1rem 2.3rem 1rem;
+          position: relative;
+        }
+        div.header:after {
+          content: '';
+          position: absolute;
+          bottom: -5rem;
+          left: 0rem;
+          height: 5.1rem;
+          display: block;
+          width: 100%;
+          z-index: 300;
+          background: linear-gradient(to bottom, white 20%, rgba(255, 255, 255, 0) 100%);
+          
+        }
+        div.header h1 {
+          margin-top: .8rem;
+          margin-bottom: .5rem;
+          font-weight: 200;
+          font-size: 1.6em;
+          letter-spacing: 0.1rem;
+          text-transform: uppercase;
+        }
+        @media (min-width: 62em) {
+          div.header h1 {
+            font-size: 1.9em;
+            letter-spacing: 0.2rem;
+          }
+        }
+        div.header h2 {
+          font-size: 1.1em;
+          font-weight: 400;
+          color: #cfd7de;
+          max-width: 30rem;
+          margin: auto;
+        }
+
+        div.item {
+          display: flex;
+          flex: auto;
+          padding: 0rem 1rem 0rem 1rem;
+        }
+
+        #timeline {
+          position: relative;
+        }
+        /* timeline style */
+        #timeline div:after {
+          content: '';
+          width: 3px;
+          position: absolute;
+          top: .5rem;
+          bottom: 0rem;
+          left: 75px;
+          z-index: 1;
+          background: #C5C5C5;
+        } 
+        /* 日期時間 */
+        #timeline h3 {
+          top: 5rem;
+          color: #888;
+          margin: 0;
+          font-size: 1em;
+          font-weight: 400;
+        }
         
-a {
-  color: #50585f;
-  text-decoration: none;
-}
-a:hover {
-  color: #383e44;
-}
-
-div.container {
-  display: flex;
-  flex: auto;
-  flex-direction: column;
-  max-height: 100%;
-}
-
-div.header {
-  height: auto;
-  text-align: center;
-  background: slategrey;
-  color: ghostwhite;
-  padding: 2.3rem 1rem 2.3rem 1rem;
-  position: relative;
-}
-div.header:after {
-  content: '';
-  position: absolute;
-  bottom: -5rem;
-  left: 0rem;
-  height: 5.1rem;
-  display: block;
-  width: 100%;
-  z-index: 300;
-  background: linear-gradient(to bottom, white 20%, rgba(255, 255, 255, 0) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-div.header h1 {
-  margin-top: .8rem;
-  margin-bottom: .5rem;
-  font-weight: 200;
-  font-size: 1.6em;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-}
-@media (min-width: 62em) {
-  div.header h1 {
-    font-size: 1.9em;
-    letter-spacing: 0.2rem;
-  }
-}
-div.header h2 {
-  font-size: 1.1em;
-  font-weight: 400;
-  color: #cfd7de;
-  max-width: 30rem;
-  margin: auto;
-}
-
-div.item {
-  display: flex;
-  flex: auto;
-  padding: 0rem 1rem 0rem 1rem;
-}
-
-#timeline {
-  position: relative;
-  display: table;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5rem;
-}
-#timeline div:after {
-  content: '';
-  width: 2px;
-  position: absolute;
-  top: .5rem;
-  bottom: 0rem;
-  left: 60px;
-  z-index: 1;
-  background: #C5C5C5;
-}
-#timeline h3 {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 5rem;
-  color: #888;
-  margin: 0;
-  font-size: 1em;
-  font-weight: 400;
-}
-@media (min-width: 62em) {
-  #timeline h3 {
-    font-size: 1.1em;
-  }
-}
-#timeline section.year {
-  position: relative;
-}
-#timeline section.year:first-child section {
-  margin-top: -1.3em;
-  padding-bottom: 0px;
-}
-#timeline section.year section {
-  position: relative;
-  padding-bottom: 1.25em;
-  margin-bottom: 2.2em;
-}
-#timeline section.year section h4 {
-  position: absolute;
-  bottom: 0;
-  font-size: .9em;
-  font-weight: 400;
-  line-height: 1.2em;
-  margin: 0;
-  padding: 0 0 0 89px;
-  color: #C5C5C5;
-}
-@media (min-width: 62em) {
-  #timeline section.year section h4 {
-    font-size: 1em;
-  }
-}
-#timeline section.year section ul {
-  list-style-type: none;
-  padding: 0 0 0 75px;
-  margin: -1.35rem 0 1em;
-  max-width: 32rem;
-  font-size: 1em;
-}
-@media (min-width: 62em) {
-  #timeline section.year section ul {
-    font-size: 1.1em;
-    padding: 0 0 0 81px;
-  }
-}
-#timeline section.year section ul:last-child {
-  margin-bottom: 0;
-}
-#timeline section.year section ul:first-of-type:after {
-  content: '';
-  width: 10px;
-  height: 10px;
-  background: #C5C5C5;
-  border: 2px solid #FFFFFF;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-  position: absolute;
-  left: 54px;
-  top: 3px;
-  z-index: 2;
-}
-#timeline section.year section ul li {
-  margin-left: .5rem;
-}
-#timeline section.year section ul li:before {
-  content: '·';
-  margin-left: -.5rem;
-  padding-right: .3rem;
-}
-#timeline section.year section ul li:not(:first-child) {
-  margin-top: .5rem;
-}
-#timeline section.year section ul li span.price {
-  color: mediumturquoise;
-  font-weight: 500;
-}
-
-#price {
-  display: inline;
-}
-
+        
+        #timeline section.year:first-child section {
+          margin-top: -1.3em;
+          padding-bottom: 0px;
+        }
+        #timeline section.year section {
+          position: relative;
+          padding-bottom: 1.25em;
+          margin-bottom: 2.2em;
+        }
+        
+        #timeline section.year section ul {
+          list-style-type: none;
+          padding: 0 0 0 75px;
+          margin: -1.35rem 0 1em;
+          max-width: 32rem;
+          font-size: 1em;
+        }
+        #timeline section.year section ul:first-of-type:after {
+          content: '';
+          width: 10px;
+          height: 10px;
+          background: #C5C5C5;
+          border: 2px solid #FFFFFF;
+          border-radius: 50%;
+          position: absolute;
+          left: 54px;
+          top: 3px;
+          z-index: 2;
+        }
+        #timeline section.year section ul li {
+          margin-left: 1rem;
+        }
         /* timeline h end */
     </style>
     <title>研究倫理委員會申請暨審查系統</title>
@@ -290,16 +236,19 @@ div.item {
             <h3>2019.2.29<br>15:30</h3>
             <section>
               <ul>
-                <li>初審通過</li>
+                <li>
+                  <h4><a href="#" class="badge badge-primary">初審送出</a></h4>
+                </li>
               </ul>
             </section>     
           </section>
           <section class="year">
               <h3>2019.3.02<br>15:30</h3>
             <section>
-              <h4>August</h4>
               <ul>
-                <li>初審送出.</li>
+                <li>
+                  <h4><a href="#" class="badge badge-success">初審通過</a></h4>
+                </li>
               </ul>
             </section>
           </section>
@@ -308,8 +257,6 @@ div.item {
       </div>
     </div>
   </div>
-
-
               <!-- timeline end-->
             </div>
           </div>
@@ -428,8 +375,6 @@ div.item {
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> -->
-
-    
 
     <!-- Menu Toggle Script -->
     <script>
