@@ -38,65 +38,10 @@
           color: #383e44;
         } */
 
-         div.container {
-          display: flex;
-          flex: auto;
-          flex-direction: column;
-          max-height: 100%;
-        }
-
-        div.header {
-          height: auto;
-          text-align: center;
-          background: slategrey;
-          color: ghostwhite;
-          padding: 2.3rem 1rem 2.3rem 1rem;
-          position: relative;
-        }
-        div.header:after {
-          content: '';
-          position: absolute;
-          bottom: -5rem;
-          left: 0rem;
-          height: 5.1rem;
-          display: block;
-          width: 100%;
-          z-index: 300;
-          background: linear-gradient(to bottom, white 20%, rgba(255, 255, 255, 0) 100%);
-          
-        }
-        div.header h1 {
-          margin-top: .8rem;
-          margin-bottom: .5rem;
-          font-weight: 200;
-          font-size: 1.6em;
-          letter-spacing: 0.1rem;
-          text-transform: uppercase;
-        }
-        @media (min-width: 62em) {
-          div.header h1 {
-            font-size: 1.9em;
-            letter-spacing: 0.2rem;
-          }
-        }
-        div.header h2 {
-          font-size: 1.1em;
-          font-weight: 400;
-          color: #cfd7de;
-          max-width: 30rem;
-          margin: auto;
-        }
-
-        div.item {
-          display: flex;
-          flex: auto;
-          padding: 0rem 1rem 0rem 1rem;
-        }
-
         #timeline {
           position: relative;
         }
-        /* timeline style */
+        /* 線段 style */
         #timeline div:after {
           content: '';
           width: 3px;
@@ -107,33 +52,24 @@
           z-index: 1;
           background: #C5C5C5;
         } 
+        #timeline section.year section {
+          position: relative;
+        }
         /* 日期時間 */
         #timeline h3 {
-          top: 5rem;
           color: #888;
-          margin: 0;
           font-size: 1em;
           font-weight: 400;
         }
-        
-        
-        #timeline section.year:first-child section {
-          margin-top: -1.3em;
-          padding-bottom: 0px;
-        }
-        #timeline section.year section {
-          position: relative;
-          padding-bottom: 1.25em;
-          margin-bottom: 2.2em;
-        }
-        
+        /* 右邊標籤位置 */
         #timeline section.year section ul {
           list-style-type: none;
           padding: 0 0 0 75px;
-          margin: -1.35rem 0 1em;
-          max-width: 32rem;
-          font-size: 1em;
         }
+        #timeline section.year section ul li {
+          margin-left: 1rem;
+        }
+        /* 點點位置 */
         #timeline section.year section ul:first-of-type:after {
           content: '';
           width: 10px;
@@ -142,13 +78,11 @@
           border: 2px solid #FFFFFF;
           border-radius: 50%;
           position: absolute;
-          left: 54px;
-          top: 3px;
+          left: 71px;
+          top: 10px;
           z-index: 2;
         }
-        #timeline section.year section ul li {
-          margin-left: 1rem;
-        }
+        
         /* timeline h end */
     </style>
     <title>研究倫理委員會申請暨審查系統</title>
@@ -232,37 +166,31 @@
             <div class="container-fluid">
                
               <!-- timeline -->
-                
-<h3>案件歷程</h3>              
-<div class="container">
-    <div class="item">
-      <div id="timeline">
-        <div>
-          <section class="year">
-            <h3>2019.2.29<br>15:30</h3>
-            <section>
-              <ul>
-                <li>
-                  <h4><a href="#" class="badge badge-primary">初審送出</a></h4>
-                </li>
-              </ul>
-            </section>     
-          </section>
-          <section class="year">
-              <h3>2019.3.02<br>15:30</h3>
-            <section>
-              <ul>
-                <li>
-                  <h4><a href="#" class="badge badge-success">初審通過</a></h4>
-                </li>
-              </ul>
-            </section>
-          </section>
-          
-        </div>
-      </div>
-    </div>
-  </div>
+              <h3>案件歷程</h3>      
+              <div id="timeline">
+                <div>
+                  <section class="year">
+                    <h3>2019.2.29<br>15:30</h3>
+                    <section>
+                      <ul>
+                        <li>
+                          <h4><a href="#" class="badge badge-primary">初審送出</a></h4>
+                        </li>
+                      </ul>
+                    </section>     
+                  </section>
+                  <section class="year">
+                      <h3>2019.3.02<br>15:30</h3>
+                    <section>
+                      <ul>
+                        <li>
+                          <h4><a href="#" class="badge badge-success">初審通過</a></h4>
+                        </li>
+                      </ul>
+                    </section>
+                  </section>
+                </div>
+              </div>
               <!-- timeline end-->
             </div>
           </div>
