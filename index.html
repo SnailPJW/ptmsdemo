@@ -35,7 +35,7 @@
 
           <!-- Sidebar -->
           <div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading">Start Bootstrap </div>
+            <div class="sidebar-heading">研究倫理委員會<br>申請暨審查系統</div>
             <div class="list-group list-group-flush">
               <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
               <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
@@ -51,29 +51,40 @@
           <div id="page-content-wrapper">
       
             <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-              <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+              <button class="btn btn-primary" id="menu-toggle">功能選單</button>
       
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
       
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
+                <ul class="navbar-nav ml-auto">
+                  <form class="form-inline">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text" for="inputGroupSelect01">目前角色</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                          <option value="0" selected>承辦人員</option>
+                          <option value="1">委員會</option>
+                          <option value="2">計畫主持人</option>
+                          <option value="3">授權的使用者(含共/協同主持人)</option>
+                          <option value="4">主任委員</option>
+                          <option value="5">一般審查委員/專家</option>
+                          <option value="6">簡易審查委員</option>
+                        </select>
+                      </div>
+                  </form>
+                    
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Dropdown
+                      個資管理
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">簡歷</a>
+                      <a class="dropdown-item" href="#">時數</a>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <a class="dropdown-item" href="./views/signin.html">登出</a>
                     </div>
                   </li>
                 </ul>
