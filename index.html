@@ -79,6 +79,10 @@
         
     </style>
     <title>研究倫理委員會申請暨審查系統</title>
+    <script defer src="dist/js/fontAwesome/all.min.js"></script>
+    <script src="dist/js/fontAwesome/solid.min.js"></script>
+    <script src="dist/js/fontAwesome/regular.min.js"></script>
+    <script src="dist/js/fontAwesome/fontawesome.min.js"></script>
   </head>
   <body>
       <div class="d-flex" id="wrapper">
@@ -87,28 +91,41 @@
           <div class="bg-light border-right" id="sidebar-wrapper">
             <a href="./index.html"><div class="sidebar-heading">研究倫理委員會<br>申請暨審查系統</div></a>
             <div class="list-group list-group-flush">
-              <li class="list-group-item list-group-item-primary">申請作業</li>
-              <a href="#" class="list-group-item bg-light">新案</a>                
-              <a href="#" class="list-group-item bg-light">變更案</a>
-              <a href="#" class="list-group-item bg-light">持續審查</a>
-              <a href="#" class="list-group-item bg-light">SAE</a>
-              <a href="#" class="list-group-item bg-light">試驗偏差</a>
-              <a href="#" class="list-group-item bg-light">結案、終止、撤案</a>
-              <a href="#" class="list-group-item bg-light">其他</a>
-              <li class="list-group-item list-group-item-primary">審查作業</li>
-              <a href="#" class="list-group-item bg-light">預審</a>                
-              <a href="#" class="list-group-item bg-light">會議時程</a>
-              <a href="#" class="list-group-item bg-light">會議記錄</a>
-              <li class="list-group-item list-group-item-primary">其他作業</li>
-              <a href="#" class="list-group-item bg-light d-flex justify-content-between align-items-center">
-                  待辦事項
-                  <span class="badge badge-danger">5</span>
-              </a>                
-              <a href="#" class="list-group-item bg-light d-flex justify-content-between align-items-center">
-                  資料補件區
-                  <span class="badge badge-danger">3</span>
-              </a>
-            </div>    
+              <div class="accordion" id="accordionExample">
+                  <a href="#" class="list-group-item list-group-item-primary" data-toggle="collapse" data-target="#collapseApply"
+                   aria-expanded="true" aria-controls="collapseApply"><i class="fas fa-file-signature mr-3"></i>申請作業</a>
+                  <div id="collapseApply" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <a href="#" class="list-group-item bg-light">新案</a>                
+                      <a href="#" class="list-group-item bg-light">變更案</a>
+                      <a href="#" class="list-group-item bg-light">持續審查</a>
+                      <a href="#" class="list-group-item bg-light">SAE</a>
+                      <a href="#" class="list-group-item bg-light">試驗偏差</a>
+                      <a href="#" class="list-group-item bg-light">結案、終止、撤案</a>
+                      <a href="#" class="list-group-item bg-light">其他</a>
+                  </div>
+                  <a href="#" class="list-group-item list-group-item-primary" data-toggle="collapse" data-target="#collapseReview"
+                  aria-expanded="true" aria-controls="collapseReview"><i class="fas fa-eye mr-3"></i>審查作業</a>
+                  <div id="collapseReview" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <a href="#" class="list-group-item bg-light">預審</a>                
+                    <a href="#" class="list-group-item bg-light">會議時程</a>
+                    <a href="#" class="list-group-item bg-light">會議記錄</a>
+                  </div>
+                  <a href="#" class="list-group-item list-group-item-primary" data-toggle="collapse" data-target="#collapseOther"
+                  aria-expanded="true" aria-controls="collapseOther"><i class="fas fa-briefcase mr-3"></i>其他作業</a>
+                  <div id="collapseOther" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <a href="#" class="list-group-item bg-light d-flex justify-content-between align-items-center">
+                          待辦事項
+                          <span class="badge badge-danger">5</span>
+                      </a>                
+                      <a href="#" class="list-group-item bg-light d-flex justify-content-between align-items-center">
+                          資料補件區
+                          <span class="badge badge-danger">3</span>
+                      </a>
+                  </div>
+              </div>
+            </div>  
+            
+            
           </div>
           <!-- /#sidebar-wrapper -->
       
