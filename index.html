@@ -29,61 +29,49 @@
         } */
 
         /* timeline h */
-/*         
-        a {
-          color: #50585f;
-          text-decoration: none;
-        }
-        a:hover {
-          color: #383e44;
-        } */
 
-        #timeline {
+        .timeline-group{
+        /* 	border: 1px solid #000; */
+        /* 	max-width: 960px; */
+        /* 	height: 800px; */
+        /* 	margin-right: auto;
+          margin-left: auto; */
+          margin-top: 20px;
           position: relative;
         }
-        /* 線段 style */
-        #timeline div:after {
-          content: '';
-          width: 3px;
+
+        .timeline{
+          width: 4px;
+          height: 130%;
+          background-color: #0062cc;
           position: absolute;
-          top: .5rem;
-          bottom: 0rem;
-          left: 75px;
-          z-index: 1;
-          background: #C5C5C5;
-        } 
-        #timeline section.year section {
-          position: relative;
+        /* 	left: 50%; */
+          transform: translateX(-50%);
         }
-        /* 日期時間 */
-        #timeline h3 {
-          color: #888;
-          font-size: 1em;
-          font-weight: 400;
+
+        .timeline-card{
+          margin-left: 18px;
+
         }
-        /* 右邊標籤位置 */
-        #timeline section.year section ul {
-          list-style-type: none;
-          padding: 0 0 0 75px;
-        }
-        #timeline section.year section ul li {
-          margin-left: 1rem;
-        }
-        /* 點點位置 */
-        #timeline section.year section ul:first-of-type:after {
-          content: '';
-          width: 10px;
-          height: 10px;
-          background: #C5C5C5;
-          border: 2px solid #FFFFFF;
+        .timeline-card:before{
+          content: "";
+          width: 16px;
+          height: 16px;
           border-radius: 50%;
+          background-color: #fff;
+          border: 4px solid #0062cc;
           position: absolute;
-          left: 71px;
-          top: 10px;
-          z-index: 2;
+          /* top: 50%; */
+          margin-left: -26px;
+        }
+
+        .timeline-card__text{
+          margin: 0px;
         }
         
         /* timeline h end */
+
+        
     </style>
     <title>研究倫理委員會申請暨審查系統</title>
   </head>
@@ -167,7 +155,7 @@
                
               <!-- timeline -->
               <h3>案件歷程</h3>      
-              <div id="timeline">
+              <!-- <div id="timeline">
                 <div>
                   <section class="year">
                     <h3>2019.2.29<br>15:30</h3>
@@ -180,7 +168,7 @@
                     </section>     
                   </section>
                   <section class="year">
-                      <h3>2019.3.02<br>15:30</h3>
+                    <h3>2019.3.02<br>15:30</h3>
                     <section>
                       <ul>
                         <li>
@@ -190,8 +178,60 @@
                     </section>
                   </section>
                 </div>
-              </div>
+              </div> -->
               <!-- timeline end-->
+
+
+              <div class="container">
+                  <div class="timeline-group">
+                      <div class="timeline"></div>
+                      <div class="timeline-cards">
+                        <div class="timeline-cards__row">
+                          <div class="timeline-card">
+                              <div class="timeline-card__datetime">
+                                  <h6>2019.2.29<br>15:30</h6>
+                              </div>
+                              <div class="timeline-card__text">
+                                  <h4><a href="#" class="badge badge-primary">初審送出</a></h4>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="timeline-group">
+                        <div class="timeline"></div>
+                        <div class="timeline-cards">
+                          <div class="timeline-cards__row">
+                            <div class="timeline-card">
+                                <div class="timeline-card__datetime">
+                                    <h6>2019.2.30<br>09:50</h6>
+                                </div>
+                                <div class="timeline-card__text">
+                                    <h4><a href="#" class="badge badge-success">初審通過</a></h4>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="timeline-group">
+                          <div class="timeline"></div>
+                          <div class="timeline-cards">
+                            <div class="timeline-cards__row">
+                              <div class="timeline-card">
+                                  <div class="timeline-card__datetime">
+                                      <h6>2019.3.01<br>14:14</h6>
+                                  </div>
+                                  <div class="timeline-card__text">
+                                      <h4><a href="#" class="badge badge-danger">退回</a></h4>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+              </div>
+
+
+
             </div>
           </div>
           <!-- /#page-content-wrapper -->
