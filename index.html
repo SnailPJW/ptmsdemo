@@ -16,8 +16,8 @@
       #main-Content{
         margin: 30px 10px;
       }
-      #table-container{
-        /* background-color: #ffd; */
+      #table-container tbody tr:hover{
+        cursor: pointer;
       }
         /* .bd-placeholder-img {
           font-size: 1.125rem;
@@ -186,6 +186,57 @@
                
               
               <div class="row" id="main-Content">
+                <div class="col-10" id="table-container">
+                  <h3>案件總覽</h3>
+                  <hr>
+                  <table class="table table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">角色名稱</th>
+                        <th scope="col">IRB/REC案號</th>
+                        <th scope="col">計畫主持人</th>
+                        <th scope="col">計畫中文名稱</th>
+                        <th scope="col">計畫類別</th>
+                        <th scope="col">案件狀態</th>
+                        <th scope="col">下次追蹤日期</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>計畫主持人</td>
+                        <td></td>
+                        <td>智少新</td>
+                        <td>我與惡的距離</td>
+                        <td></td>
+                        <td>退回補件</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>計畫主持人</td>
+                        <td></td>
+                        <td>羅火漢</td>
+                        <td>白日夢冒險家</td>
+                        <td></td>
+                        <td>行政審查中</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>計畫主持人</td>
+                        <td></td>
+                        <td>寒果凍</td>
+                        <td>果凍出得去</td>
+                        <td></td>
+                        <td>待提交</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
                 <div class="col-2">
                     <!-- timeline -->
               <h3>案件歷程</h3>      
@@ -239,56 +290,7 @@
                 
               <!-- timeline end-->
                 </div>
-                <div class="col-10" id="table-container">
-                  <h3>案件總覽</h3>
-                  <hr>
-                  <table class="table table-striped table-hover">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">角色名稱</th>
-                        <th scope="col">IRB/REC案號</th>
-                        <th scope="col">計畫主持人</th>
-                        <th scope="col">計畫中文名稱</th>
-                        <th scope="col">計畫類別</th>
-                        <th scope="col">案件狀態</th>
-                        <th scope="col">下次追蹤日期</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>計畫主持人</td>
-                        <td></td>
-                        <td>智少新</td>
-                        <td>我與惡的距離</td>
-                        <td></td>
-                        <td>退回補件</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>計畫主持人</td>
-                        <td></td>
-                        <td>羅火漢</td>
-                        <td>白日夢冒險家</td>
-                        <td></td>
-                        <td>行政審查中</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>計畫主持人</td>
-                        <td></td>
-                        <td>寒果凍</td>
-                        <td>果凍出得去</td>
-                        <td></td>
-                        <td>待提交</td>
-                        <td></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+
               </div>
 
               
@@ -426,6 +428,11 @@
       $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
+      });
+
+      $('#table-container tbody tr').click(function() {
+          var cellValue = $(this).find('td').eq(5).text().trim();//抓取row中的 案件狀態欄位
+          alert(cellValue);
       });
     </script>
   </body>
