@@ -183,9 +183,18 @@
             </nav>
       
             <div class="container-fluid">
-               
               
               <div class="row" id="main-Content">
+                <div class="col-12">
+                    <div class="alert alert-warning alert-dismissible" role="alert">
+                      <button type="button" onclick="this.parentNode.parentNode.removeChild(this.parentNode);"
+                      class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                      <strong><i class="fas fa-exclamation-circle mr-2"></i>這是系統公告</strong>
+                      <marquee direction="left" scrollamount="3">
+                        <p><h3>公告測試!測試!測試! 審查!申請!測試! 系統出得去! 人進得來!</h3></p>
+                      </marquee>
+                    </div>
+                </div>
                 <div class="col-10" id="table-container">
                   <h3>案件總覽</h3>
                   <hr>
